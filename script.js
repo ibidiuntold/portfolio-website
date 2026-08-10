@@ -48,6 +48,10 @@
 /* Runs after DOM is ready. Depends on data.js being loaded first. */
 document.addEventListener('DOMContentLoaded', function () {
   renderProjects();
+
+  /* Auto-update copyright year */
+  var yearEl = document.getElementById('copyright-year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
 
 function renderProjects() {

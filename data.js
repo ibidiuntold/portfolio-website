@@ -11,7 +11,7 @@ const PROJECTS = [
     title: "Vickie's Atelier",
     description:
       "A responsive website for a fashion boutique showcasing their collections and services. Built with clean HTML and CSS for a polished, mobile-friendly experience.",
-    tags: ["HTML", "CSS"],
+    tags: ["JavaScript", "TypeScript", "CSS"],
     image: "img/project-vickie.jpg",
     imageAlt: "Clothing rack in a fashion boutique",
     demoUrl: "https://vickies-atelier.vercel.app",
@@ -21,7 +21,7 @@ const PROJECTS = [
     title: "Contact Manager",
     description:
       "A web application designed for uploading, viewing, editing and deleting contacts. This is a test project showcasing my knowledge of the MERN stack",
-    tags: ["HTML", "CSS", "JavaScript, Node.js using Express, MongoDB"],
+    tags: ["HTML", "CSS", "JavaScript", "Node.js using Express", "MongoDB"],
     image: "img/project-contact.jpg",
     imageAlt: "Screenshot of Contact Manager",
     demoUrl: "https://ibidiuntold.github.io/Contact-Manager/",
