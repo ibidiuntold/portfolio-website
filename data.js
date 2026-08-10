@@ -10,7 +10,7 @@ const PROJECTS = [
   {
     title: "Vickie's Atelier",
     description:
-      "A responsive website for a fashion boutique showcasing their collections and services. Built with clean HTML and CSS for a polished, mobile-friendly experience.",
+      "A responsive website for a fashion boutique showcasing their collections and services. First built with clean HTML and CSS and later scaffolded with Next.js for a polished, mobile-friendly experience.",
     tags: ["JavaScript", "TypeScript", "CSS"],
     image: "img/project-vickie.jpg",
     imageAlt: "Clothing rack in a fashion boutique",
