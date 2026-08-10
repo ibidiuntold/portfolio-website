@@ -12,7 +12,7 @@ const PROJECTS = [
     description:
       "A responsive website for a fashion boutique showcasing their collections and services. Built with clean HTML and CSS for a polished, mobile-friendly experience.",
     tags: ["HTML", "CSS"],
-    image: "img/project-vickie",
+    image: "img/project-vickie.jpg",
     imageAlt: "Clothing rack in a fashion boutique",
     demoUrl: "https://vickies-atelier.vercel.app",
     repoUrl: "https://github.com/ibidiuntold/vickies-atelier"
@@ -22,7 +22,7 @@ const PROJECTS = [
     description:
       "A web application designed for uploading, viewing, editing and deleting contacts. This is a test project showcasing my knowledge of the MERN stack",
     tags: ["HTML", "CSS", "JavaScript, Node.js using Express, MongoDB"],
-    image: "img/project-contact",
+    image: "img/project-contact.jpg",
     imageAlt: "Screenshot of Contact Manager",
     demoUrl: "https://ibidiuntold.github.io/Contact-Manager/",
     repoUrl: "https://github.com/ibidiuntold/Contact-Manager"
