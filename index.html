@@ -3,83 +3,249 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <!-- Link external CSS -->
-  <link rel="stylesheet" href="style.css">
+  <title>Iyango Williams — Full Stack Engineer</title>
+  <meta name="description" content="Portfolio of Iyango Williams, Full Stack Engineer and EEE Graduate." />
+  <link rel="stylesheet" href="style.css" />
+  <script src="data.js"></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- ===== HEADER ===== -->
-  <header>
-    <div class="container nav">
-      <h1 class="logo">Iyango Williams</h1>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+
+  <!-- Skip link: first focusable element for keyboard users -->
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="#hero" class="logo" aria-label="Iyango Williams — home">Iyango Williams</a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
     </div>
   </header>
 
-  <!-- ===== ABOUT SECTION ===== -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      Hi, I'm Williams, an aspiring web developer with a background in 
-      Electrical/Electronic Engineering. I’m passionate about technology, 
-      problem-solving, and building creative digital solutions. I have 
-      basic knowledge of JavaScript, HTML, and CSS, and I’m constantly 
-      learning new skills to improve.
-    </p>
-  </section>
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="main-content">
 
-  <!-- ===== PROJECTS SECTION ===== -->
-  <section id="projects">
-  <h2>My Projects</h2>
-  <div class="projects">
+    <!-- ===== HERO ===== -->
+    <section id="hero" class="hero" aria-label="Introduction">
+      <div class="hero-content">
+        <h1>Iyango Williams</h1>
+        <p class="hero-sub">Full Stack Engineer &amp; EEE Graduate</p>
+        <a href="#projects" class="btn btn-accent">View My Work</a>
+      </div>
+    </section>
 
-    <a href="https://github.com/ibidiuntold/vickies-atelier.git" target="_blank" class="project">
-      <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80');"></div>
-      <h3>Vickie's Atelier</h3>
-      <p>
-        A responsive website for a fashion boutique showcasing their 
-        collections and services.
-      </p>
-    </a>
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="about-section">
+      <div class="section-inner">
+        <div class="section-header">
+          <h2>About Me</h2>
+          <span class="section-divider"></span>
+          <p class="section-sub">A little background on who I am and what drives me.</p>
+        </div>
+        <p class="about-bio">
+          Hi, I'm Iyango Williams — a Full Stack Engineer and Electrical &amp; Electronic Engineering graduate
+          from the University of Benin. Currently working at Inan Management Limited, I design and build
+          scalable APIs, microservices, authentication systems, and full-stack applications across hotel
+          booking platforms, ERP systems, delivery-tracking apps, and wagering engines. I'm proficient in
+          the MERN stack and Next.js, and I hold certifications in HSE, ICT, and Occupational Safety.
+          I'm passionate about technology, problem-solving, and building creative digital solutions — and
+          I'm constantly learning to stay ahead of the curve.
+        </p>
+      </div>
+    </section>
 
-    <a href="https://github.com/ibidiuntold/vickies-atelier.git" target="_blank" class="project">
-      <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=600&q=80');"></div>
-      <h3>Live Scores</h3>
-      <p>
-        A web application that provides real-time updates on sports scores 
-        and statistics.
-      </p>
-    </a>
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="projects-section">
+      <div class="section-inner">
+        <div class="section-header">
+          <h2>My Projects</h2>
+          <span class="section-divider"></span>
+          <p class="section-sub">A selection of things I've built. Click through to see the code or the live site.</p>
+        </div>
+        <!-- Cards injected here by script.js reading data.js -->
+        <div id="projects-grid" class="projects-grid"></div>
+      </div>
+    </section>
 
-    <a href="https://github.com/ibidiuntold/vickies-atelier.git" target="_blank" class="project">
-      <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80');"></div>
-      <h3>Boiling Point Tutorials</h3>
-      <p>
-        An educational platform offering tutorials and resources for 
-        university students mostly in their 100L and 200L.
-      </p>
-    </a>
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="skills-section">
+      <div class="section-inner">
+        <div class="section-header">
+          <h2>Skills</h2>
+          <span class="section-divider"></span>
+          <p class="section-sub">A mix of technical expertise and professional strengths built across engineering, software, and education.</p>
+        </div>
+        <div class="skills-grid">
 
-  </div>
-</section>
+          <!-- HTML, CSS & JavaScript -->
+          <div class="skill-item">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3>HTML, CSS &amp; JavaScript</h3>
+            <p>Building semantic, accessible, responsive web interfaces and data-driven UI from scratch.</p>
+          </div>
 
+          <!-- Full Stack Engineering -->
+          <div class="skill-item">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5a2 2 0 0 0 2 2h1"/>
+                <path d="M16 3h1a2 2 0 0 1 2 2v5a2 2 0 0 0 2 2 2 2 0 0 0-2 2v5a2 2 0 0 1-2 2h-1"/>
+              </svg>
+            </div>
+            <h3>Full Stack Engineering (MERN &amp; Next.js)</h3>
+            <p>Designing and maintaining scalable APIs, microservices, and backend systems using MongoDB, Express, React, Node.js, and Next.js.</p>
+          </div>
 
-  <!-- ===== CONTACT SECTION ===== -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>If you'd like to collaborate or just say hello, feel free to reach out!</p>
-    <p>Email: <a href="mailto:williamsahupa@gmail.com">williamsahupa@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/iyango-williams-657504249?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B8nP6njnJTB6xrxi9gGeIag%3D%3D" target="_blank">Iyango Williams</a></p>
-    <p>GitHub: <a href="https://github.com/dashboard" target="_blank">ibidiuntold</a></p>
-  </section>
+          <!-- Electrical & Electronic Engineering -->
+          <div class="skill-item">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <h3>Electrical &amp; Electronic Engineering</h3>
+            <p>Circuit analysis, systems thinking, and fiber optic splicing with fusion machines.</p>
+          </div>
+
+          <!-- Automation & CI/CD -->
+          <div class="skill-item">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                <path d="M4.93 4.93a10 10 0 0 0 0 14.14"></path>
+                <path d="M12 2v2"></path>
+                <path d="M12 20v2"></path>
+                <path d="M2 12h2"></path>
+                <path d="M20 12h2"></path>
+              </svg>
+            </div>
+            <h3>Automation &amp; CI/CD</h3>
+            <p>Installing, configuring, and troubleshooting automation software and Docker deployments with CI/CD pipelines.</p>
+          </div>
+
+          <!-- Health, Safety & Environment -->
+          <div class="skill-item">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3>Health, Safety &amp; Environment</h3>
+            <p>Certified HSE professional with HSEP, OSHP, and EIAP qualifications. Experienced in safety management and environmental compliance.</p>
+          </div>
+
+          <!-- Communication & Leadership -->
+          <div class="skill-item">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3>Communication &amp; Leadership</h3>
+            <p>Teaching, team leadership (NYSC CDS President, TACSFON Chapter President), report writing, and cross-functional collaboration.</p>
+          </div>
+
+          <!-- Problem Solving -->
+          <div class="skill-item">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+            </div>
+            <h3>Problem Solving</h3>
+            <p>Decomposing complex technical challenges into clear, workable solutions across engineering and software domains.</p>
+          </div>
+
+          <!-- Responsive Design -->
+          <div class="skill-item">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3>Responsive Design</h3>
+            <p>Crafting interfaces that adapt seamlessly across mobile, tablet, and desktop screens.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT CTA STRIP ===== -->
+    <section id="contact" class="cta-section">
+      <div class="cta-inner">
+        <h2>Let's Work Together</h2>
+        <p>I'm open to freelance projects, collaborations, and full-time opportunities. Let's build something together.</p>
+        <a href="#footer-contact" class="btn btn-accent">Get In Touch</a>
+      </div>
+    </section>
+
+  </main>
 
   <!-- ===== FOOTER ===== -->
-  <footer>
-    <p>&copy; 2025 Iyango Williams. All Rights Reserved.</p>
+  <footer class="site-footer">
+    <div class="footer-top">
+
+      <div class="footer-col" id="footer-contact">
+        <h4 class="footer-heading">Contact</h4>
+        <ul>
+          <li>
+            <a href="mailto:williamsahupa@gmail.com">williamsahupa@gmail.com</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/iyango-williams-657504249" target="_blank" rel="noopener noreferrer">LinkedIn — Iyango Williams</a>
+          </li>
+          <li>
+            <a href="https://github.com/ibidiuntold" target="_blank" rel="noopener noreferrer">GitHub — ibidiuntold</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Navigate</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Iyango Williams. All Rights Reserved.</p>
+    </div>
   </footer>
+
 </body>
 </html>
