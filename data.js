@@ -27,14 +27,5 @@ const PROJECTS = [
     demoUrl: "https://ibidiuntold.github.io/Contact-Manager/",
     repoUrl: "https://github.com/ibidiuntold/Contact-Manager"
   },
-  {
-    title: "INAN Feedback",
-    description:
-      "A multi-tenant web application for creating and distributing public feedback forms, collecting responses, and analysing results — all from a centralised dashboard.",
-    tags: ["TypeScript", "JavaScript", "CSS"],
-    image: "https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80",
-    imageAlt: "Students studying together at a university library",
-    demoUrl: "https://inan-awards.vercel.app", 
-    repoUrl: "https://github.com/ibidiuntold/inan-feedback"  
-  }
+  
 ];
